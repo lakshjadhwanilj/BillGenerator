@@ -1,0 +1,5 @@
+Bill Breakdown: 
+Coffee:                   ...$4.99 
+Sandwich:                 ...$7.89 
+Tip:                      ...$2.00 
+Total:                    ...$14.88
