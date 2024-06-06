@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
+// A Struct reprsenting a bill for a customer
 type Bill struct {
 	CustomerName string
 	Items        map[string]float64
 	Tip          float64
 }
 
-// Generate new bills
+// Create a new bill for a give customer
 func GenerateBill(customerName string) Bill {
 	newBill := Bill{
 		CustomerName: customerName,
@@ -18,7 +19,7 @@ func GenerateBill(customerName string) Bill {
 	return newBill
 }
 
-// Format the bill
+// Generate a formatted string represeting the bill
 func (billInstance *Bill) FormatBill() string {
 	billString := "Bill Breakdown: \n"
 	var totalAmount float64
@@ -39,12 +40,12 @@ func (billInstance *Bill) FormatBill() string {
 	return billString
 }
 
-// Update tip
+// Updates the tip amount on the bill
 func (billInstance *Bill) UpdateTip(tipAmount float64) {
 	billInstance.Tip = tipAmount
 }
 
-// Add items to the bill
+// Adds an item and its price to the bill
 func (billInstance *Bill) AddItem(itemName string, itemPrice float64) {
 	billInstance.Items[itemName] = itemPrice
 }
